@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Windows;
+
 using UnityEngine.SceneManagement;
 
 
@@ -20,10 +20,16 @@ public class phoneCameraScript : MonoBehaviour {
     public GameObject captured;
     Vector3 screenWorld;
 
+
+    public bool b_FrontCam;
+
+   
     private void Start()
     {
         defaultBackground = background.texture;
         WebCamDevice[] devices = WebCamTexture.devices;
+
+        b_FrontCam = true;
 
         if(devices.Length == 0)
         {
@@ -34,14 +40,21 @@ public class phoneCameraScript : MonoBehaviour {
 
         for(int i = 0; i < devices.Length; i++)
         {
-            /*
-            if (devices[i].isFrontFacing)
+            if (b_FrontCam)
             {
+                if (devices[i].isFrontFacing)
+                {
+                    frontCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
+                }
+            }else if (!b_FrontCam)
+            {
+                if (!devices[i].isFrontFacing)
+                {
+                    frontCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
+                }
+            }else{
                 frontCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
-            }
-            */
-            frontCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
-            Debug.Log(devices[i].name);
+            }    
         }
 
         if(frontCam == null)
@@ -62,6 +75,19 @@ public class phoneCameraScript : MonoBehaviour {
         zone.rectTransform.InverseTransformPoint(screenWorld);
         zone.rectTransform.sizeDelta = new Vector2(Screen.width / 4.5f, Screen.height / 2.2f);
 
+    }
+
+    public void ToggleCam()
+    {
+        if (b_FrontCam)
+        {
+            b_FrontCam = false;
+            
+        }else if (!b_FrontCam)
+        {
+            b_FrontCam = true;
+        }
+        Debug.Log(b_FrontCam);
     }
 
     public void MenuReturn()
