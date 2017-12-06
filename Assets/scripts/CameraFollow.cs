@@ -20,33 +20,27 @@ public class CameraFollow : MonoBehaviour {
 
     private void Start()
     {
-
+     
         /*
         Texture2D texLoad;
         texLoad = new Texture2D(2, 2);
         texLoad.LoadImage(File.ReadAllBytes(Application.dataPath + "/test.png"));
-
+        Sprite tempSprite = Sprite.Create(texLoad, new Rect(texLoad.width/4.5f, texLoad.height/2f, texLoad.width/2.5f, texLoad.height/3f), new Vector2(0.5f,0.5f), 1000);
   
 
         levelEnd = false;
         EndLevelText.gameObject.SetActive(false);
-        
-
-        Sprite tempSprite = Sprite.Create(texLoad, new Rect(texLoad.width/4.5f, texLoad.height/2f, texLoad.width/2.5f, texLoad.height/3f), new Vector2(0.5f,0.5f), 1000);
+                
         Debug.Log(texLoad.texelSize + " " + objs[0].GetComponent<SpriteRenderer>().size);
-
        
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player"); //sort this out it's gonna bit you in the ass
         objs[0].gameObject.SetActive(true); //on level reset if you lose it doesn't enable the first one so the order gets screwed
         objs[1].gameObject.SetActive(false); //does awake run when and obj is setActive? Could place this is the fling script
         objs[2].gameObject.SetActive(false);
-        objs[0].gameObject.GetComponent<SpriteRenderer>().sprite = tempSprite;
-       
-       
+        objs[0].gameObject.GetComponent<SpriteRenderer>().sprite = tempSprite;      
 
         for (int i=0; i < objs.Length; i++)
-        {
-           
+        {           
             //objs[i].gameObject.GetComponent<SpriteRenderer>().sprite 
         }
         */
