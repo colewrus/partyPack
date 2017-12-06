@@ -140,54 +140,36 @@ Tilemap:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227853968477356}
   m_Enabled: 1
-  m_Tiles:
-  - first: {x: -1, y: 0, z: 0}
-    second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: -3, y: 2, z: 0}
-    second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
+  m_Tiles: {}
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: 1efcb599da4c8a04393ffc9a986b0c1b, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 2
-    m_Data: {fileID: 21300000, guid: 8dcf1b2036c43d04fa0b7bd485f910e0, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 2
+  - m_RefCount: 0
     m_Data:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
+      e00: 4.25e-43
+      e01: NaN
+      e02: 1.4477493e-36
+      e03: 8.793036e-39
       e10: 0
-      e11: 1
+      e11: NaN
       e12: 0
       e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
+      e20: 2.2e-44
+      e21: 1198.1953
+      e22: 2.5345929
       e23: 0
       e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
+      e31: 1e-45
+      e32: 1e-45
+      e33: 0
   m_TileColorArray:
-  - m_RefCount: 2
-    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 1199.9395, g: 1e-45, b: 2.5214818, a: 1e-45}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -3, y: 0, z: 0}

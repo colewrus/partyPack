@@ -15,6 +15,11 @@ public class fling : MonoBehaviour {
 
     public GameObject nextBall;
 
+    private void Awake()
+    {
+        Debug.Log(gameObject.name);
+    }
+
     private void Update()
     {
         if (isPressed)
