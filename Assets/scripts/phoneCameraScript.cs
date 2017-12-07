@@ -142,8 +142,8 @@ public class phoneCameraScript : MonoBehaviour {
 
         //System.IO.File.WriteAllBytes(Application.dataPath + "/test.png", imageBytes);
 
-        string file = Application.persistentDataPath + "/test.png";
-        File.WriteAllBytes(file, imageBytes);
+        //string file = Application.persistentDataPath + "/test.png";
+        //File.WriteAllBytes(file, imageBytes);
         //This could be a preview
         //inImage.texture = screenImage;
 

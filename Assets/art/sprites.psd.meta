@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: 76a8552b8f5c6da4593c61ed86d9b787
-timeCreated: 1512424298
+timeCreated: 1512659883
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: sprites_0
     21300002: sprites_1
+    21300004: sprites_2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -110,6 +111,20 @@ TextureImporter:
         y: 382
         width: 100
         height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 381
+        width: 93
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

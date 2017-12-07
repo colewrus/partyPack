@@ -26,9 +26,9 @@ public class menuScript : MonoBehaviour {
         aboutGroup.SetActive(true);
     }
 
-    public void Visit_Website()
+    public void Visit_Website(string URL)
     {
-        Application.OpenURL("http://taglabs.org/");
+        Application.OpenURL(URL);
     }
 
     public void Take_Photo()
