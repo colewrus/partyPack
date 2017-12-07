@@ -10,14 +10,20 @@ public class enemyScript : MonoBehaviour {
     public float impact = 4f;
     public ParticleSystem deathEffect;
 
- 
+    
     public static int EnemiesAlive = 0;
 
     private void Awake()
     {        
-        EnemiesAlive++;
+        //EnemiesAlive++;
+        
     }
 
+    private void Start()
+    {
+        EnemiesAlive++;
+        Debug.Log(EnemiesAlive);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -39,7 +45,7 @@ public class enemyScript : MonoBehaviour {
         {
             Camera.main.GetComponent<CameraFollow>().levelEnd = true;                   
         }
-
+        Debug.Log(EnemiesAlive);
         Destroy(gameObject);
     }
 

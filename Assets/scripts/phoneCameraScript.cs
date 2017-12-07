@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.IO;
 using UnityEngine.SceneManagement;
 
 
@@ -40,6 +40,7 @@ public class phoneCameraScript : MonoBehaviour {
 
         for(int i = 0; i < devices.Length; i++)
         {
+            /*
             if (b_FrontCam)
             {
                 if (devices[i].isFrontFacing)
@@ -55,6 +56,9 @@ public class phoneCameraScript : MonoBehaviour {
             }else{
                 frontCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
             }    
+            */
+
+            frontCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
         }
 
         if(frontCam == null)
@@ -64,6 +68,7 @@ public class phoneCameraScript : MonoBehaviour {
         }
 
         frontCam.Play();
+
         background.texture = frontCam;
 
         camAvailable = true;
@@ -92,6 +97,7 @@ public class phoneCameraScript : MonoBehaviour {
 
     public void MenuReturn()
     {
+        frontCam.Stop();
         SceneManager.LoadScene("menu");
     }
 
@@ -101,6 +107,7 @@ public class phoneCameraScript : MonoBehaviour {
             return;
         float ratio = (float)frontCam.width / (float)frontCam.height;
         fit.aspectRatio = ratio;
+        
 
         float scaleY = frontCam.videoVerticallyMirrored ? -1f: 1f;
         background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
@@ -133,7 +140,10 @@ public class phoneCameraScript : MonoBehaviour {
         screenImage.Apply();
         byte[] imageBytes = screenImage.EncodeToPNG();
 
-        System.IO.File.WriteAllBytes(Application.dataPath + "/test.png", imageBytes);
+        //System.IO.File.WriteAllBytes(Application.dataPath + "/test.png", imageBytes);
+
+        string file = Application.persistentDataPath + "/test.png";
+        File.WriteAllBytes(file, imageBytes);
         //This could be a preview
         //inImage.texture = screenImage;
 

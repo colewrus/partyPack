@@ -18,13 +18,16 @@ public class fling : MonoBehaviour {
     
 
     private void Awake()
-    {
-        Debug.Log(gameObject.name);
+    {       
+        
         Texture2D texLoad;
-        texLoad = new Texture2D(2, 2);
-        texLoad.LoadImage(File.ReadAllBytes(Application.dataPath + "/test.png"));
+        texLoad = new Texture2D(2, 2);        
+            
+        texLoad.LoadImage(File.ReadAllBytes(Application.persistentDataPath + "/test.png"));
+               
         Sprite tempSprite = Sprite.Create(texLoad, new Rect(texLoad.width/4, texLoad.height/4, (texLoad.width/2), 3*(texLoad.height/4)), new Vector2(0.5f, 0.5f), 1000);
         gameObject.transform.GetComponentInChildren<SpriteRenderer>().sprite = tempSprite;
+        
     }
 
     private void Update()
